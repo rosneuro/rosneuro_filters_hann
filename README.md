@@ -1,6 +1,6 @@
-# ROSNeuro Hann window
+# ROS-Neuro Hann window
 
-This ROSNeuro filter plugin applies an Hann window to the provided data.
+This ROS-Neuro filter plugin applies an Hann window to the provided data.
 
 ## Algorithm:
 The filter applies the Hann window to the data. The hann window is implemented as follows:
