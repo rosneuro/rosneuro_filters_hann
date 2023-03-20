@@ -5,7 +5,7 @@ This ROSNeuro filter plugin applies an Hann window to the provided data.
 ## Algorithm:
 The filter applies the Hann window to the data. The hann window is implemented as follows:
 ```cpp
-  int nsamples;
+	int nsamples;
 	for(auto i = 0; i<nsamples; i++)
 		window.at(i) = (1.0 - cos((2.0 * M_PI * i)/(nsamples-1))) * 0.5;
 ```
