@@ -2,12 +2,12 @@
 #define ROSNEURO_FILTERS_HANN_HPP
 
 #include <Eigen/Dense>
-#include <rosneuro_filters/Filter.hpp>
+#include <rosneuro_filters/Window.hpp>
   
 namespace rosneuro {
 
 template <typename T>
-class Hann : public Filter<T> {
+class Hann : public Window<T> {
 	public:
 		Hann(void);
 		~Hann(void) {};
@@ -20,9 +20,7 @@ class Hann : public Filter<T> {
 
 	private:
 		int nsamples_;
-		bool is_window_set_;
 		Eigen::Matrix<T, Eigen::Dynamic, 1> window_;
-		T wnorm_;
 };
 
 template<typename T>
