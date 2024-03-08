@@ -23,6 +23,11 @@ class Hann : public Filter<T> {
 		bool is_window_set_;
 		Eigen::Matrix<T, Eigen::Dynamic, 1> window_;
 		T wnorm_;
+
+    FRIEND_TEST(HannTestSuite, Constructor);
+    FRIEND_TEST(HannTestSuite, ApplyWithValidWindow);
+    FRIEND_TEST(HannTestSuite, CreateWindowWithValidSamples);
+    FRIEND_TEST(HannTestSuite, CreateWindowWithInvalidSamples);
 };
 
 template<typename T>
