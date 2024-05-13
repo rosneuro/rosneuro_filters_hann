@@ -48,7 +48,7 @@ catkin_package(
 # Build
 ##############################################################################
 
-catkin_add_gtest(TestHann test/test_hann.cpp)
+catkin_add_gtest(TestHann test/TestHann.cpp)
 target_link_libraries(TestHann ${GTEST_BOTH_LIBRARIES} pthread gmock ${Eigen3_LIBRARIES})
 target_link_libraries(TestHann ${PROJECT_NAME} ${catkin_LIBRARIES})
 include_directories(${GTEST_INCLUDE_DIRS} gmock pthread include include/${PROJECT_NAME}/)
@@ -67,7 +67,7 @@ target_link_libraries(${PROJECT_NAME} ${Eigen3_LIBRARIES}
 ## Executables ##
 #################
 
-add_executable(hann_window test/hann_window.cpp)
+add_executable(hann_window example/hann_window.cpp)
 target_link_libraries(hann_window ${PROJECT_NAME} ${catkin_LIBRARIES}) 
 
 
